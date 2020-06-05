@@ -27,16 +27,40 @@ namespace ProjectFacebook.Automation
            driver = Driver;
            wait = Wait;
         }
+		
+		private bool IsElementPresent(By by)
+        {
+            try
+            {
+                driver.FindElement(by);
+                return true;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
 
-        public void UserLogin(RemoteWebDriver driver)
+		public void UserLogin(RemoteWebDriver driver)
         {
             loginLoc = new LoginLocators(driver, wait);
 
-            loginLoc.UserBox.Click();
-            loginLoc.UserBox.SendKeys("xxxxxx@hotmail.com");
-            loginLoc.PwdBox.Click();
-            loginLoc.PwdBox.SendKeys("xxxxxxx");
-            loginLoc.LoginButton.Click();
+          if (IsElementPresent(loginLoc.UserBox))
+            {
+                driver.FindElement(loginLoc.UserBox).Click();
+                driver.FindElement(loginLoc.UserBox).SendKeys("XXXXXXXX");
+                driver.FindElement(loginLoc.PwdBox).Click();
+                driver.FindElement(loginLoc.PwdBox).SendKeys("XXXXXXXX");
+                driver.FindElement(loginLoc.LoginButton).Click();
+            }
+            else if(IsElementPresent(loginLoc.UserBox2))
+            {
+                driver.FindElement(loginLoc.UserBox2).Click();
+                driver.FindElement(loginLoc.UserBox2).SendKeys("XXXXXXXXX");
+                driver.FindElement(loginLoc.PwdBox2).Click();
+                driver.FindElement(loginLoc.PwdBox2).SendKeys("XXXXXXXXXXX");
+                driver.FindElement(loginLoc.LoginButton).Click();
+            }
         }
 
         public void mandarMensaje(RemoteWebDriver driver)

@@ -10,7 +10,7 @@ C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFaceboo
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\bin\Debug\nunit.framework.pdb
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\bin\Debug\nunit.framework.xml
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\bin\Debug\WebDriver.xml
+C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\obj\Debug\ProjectFacebook.csprojAssemblyReference.cache
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\obj\Debug\ProjectFacebook.csproj.CopyComplete
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\obj\Debug\ProjectFacebook.exe
 C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\obj\Debug\ProjectFacebook.pdb
-C:\Users\Adrian\Documents\CursoSelenium\Unidad 2\ProjectFacebook2\ProjectFacebook\obj\Debug\ProjectFacebook.csprojAssemblyReference.cache
