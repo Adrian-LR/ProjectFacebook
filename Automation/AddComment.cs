@@ -87,6 +87,35 @@ namespace ProjectFacebook.Automation
                 
             }
         }
-
+       
+	    public void BuscaCova(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+            Thread.Sleep(5000);
+            Folow.TextByscar.SendKeys("Cova Lol"+ Keys.Enter);
+            Folow.LinkCova.Click();
+            Thread.Sleep(5000);
+		    
+               
+                    }
+	    
+	    public void Darlike(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+            Thread.Sleep(5000);
+            Folow.Darlelike.click();
+            Thread.Sleep(5000);
+               
+                    }
+	    
+	    public void MandarComentario(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+            Thread.Sleep(5000);
+            Folow.SeleccionaCmt.click();
+            Thread.Sleep(5000);
+               
+                    }
+	    
     }
 }

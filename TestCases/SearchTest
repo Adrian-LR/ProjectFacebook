@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ProjectFacebook.Automation;
+using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
+
+namespace ProjectFacebook.TestCases
+{
+    class SearchTest : Base.BasePage
+    {
+        [Test]
+        public virtual void SearchFacebook()
+        {
+            try
+            {
+                var driver = SetUp();
+                var Search = new AddComment(driver, new WebDriverWait(driver, TimeSpan.FromSeconds(20)));
+                Search.UserLogin(driver);
+                Search.BuscaCova(driver);
+                driver.Quit();
+            }
+            catch (Exception e)
+            {
+                TestContext.Error.WriteLine($"{e.ToString()}");
+                Assert.Ignore();
+            }
+        }
+    }
+}
