@@ -7,8 +7,6 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using ProjectFacebook.Locators;
-using System.Threading;
-
 
 
 namespace ProjectFacebook.Automation
@@ -19,16 +17,14 @@ namespace ProjectFacebook.Automation
         private WebDriverWait wait;
         
         LoginLocators loginLoc;
-        HomeLocators  homeLoc;
-
 
         public AddComment(RemoteWebDriver Driver, WebDriverWait Wait)
         {
            driver = Driver;
            wait = Wait;
         }
-		
-		private bool IsElementPresent(By by)
+
+        private bool IsElementPresent(By by)
         {
             try
             {
@@ -41,7 +37,7 @@ namespace ProjectFacebook.Automation
             }
         }
 
-		public void UserLogin(RemoteWebDriver driver)
+        public void UserLogin(RemoteWebDriver driver)
         {
             loginLoc = new LoginLocators(driver, wait);
 
@@ -61,61 +57,8 @@ namespace ProjectFacebook.Automation
                 driver.FindElement(loginLoc.PwdBox2).SendKeys("XXXXXXXXXXX");
                 driver.FindElement(loginLoc.LoginButton).Click();
             }
+
         }
 
-        public void mandarMensaje(RemoteWebDriver driver)
-        {           
-            try
-            {
-                homeLoc = new HomeLocators(driver, wait);
-                Thread.Sleep(5000);
-                homeLoc.btnbuscarChat.Click();
-                Thread.Sleep(5000);
-                homeLoc.txtBuscarChat.Click();
-                Thread.Sleep(2000);
-                homeLoc.txtBuscarChat.SendKeys("Oscar Cova");
-                Thread.Sleep(5000);
-                homeLoc.seleccionaCova.Click();
-                Thread.Sleep(2000);
-                homeLoc.txtMensajeCova.SendKeys("Hola");
-                Thread.Sleep(2000);
-                homeLoc.btnEnviarACova.Click();               
-                
-            }
-            catch (Exception e)
-            {                
-                
-            }
-        }
-       
-	    public void BuscaCova(RemoteWebDriver driver)
-            {
-            Folow = new FollowLocators(driver, wait);
-            Thread.Sleep(5000);
-            Folow.TextByscar.SendKeys("Cova Lol"+ Keys.Enter);
-            Folow.LinkCova.Click();
-            Thread.Sleep(5000);
-		    
-               
-                    }
-	    
-	    public void Darlike(RemoteWebDriver driver)
-            {
-            Folow = new FollowLocators(driver, wait);
-            Thread.Sleep(5000);
-            Folow.Darlelike.click();
-            Thread.Sleep(5000);
-               
-                    }
-	    
-	    public void MandarComentario(RemoteWebDriver driver)
-            {
-            Folow = new FollowLocators(driver, wait);
-            Thread.Sleep(5000);
-            Folow.SeleccionaCmt.click();
-            Thread.Sleep(5000);
-               
-                    }
-	    
     }
 }
