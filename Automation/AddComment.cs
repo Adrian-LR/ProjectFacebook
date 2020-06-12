@@ -129,6 +129,56 @@ namespace ProjectFacebook.Automation
                 return false;
             }
         }
+		
+			    public void Darlike(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+            Thread.Sleep(5000);
+            Folow.Darlelike.click();
+            Thread.Sleep(5000);
+               
+                    }
+	    
+	    public void MandarComentario(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+            Thread.Sleep(5000);
+            Folow.SeleccionaCmt.click();
+            Thread.Sleep(5000);
+               
+                    }
+	    
+
+
+       public void BuscaCova(RemoteWebDriver driver)
+            {
+            Folow = new FollowLocators(driver, wait);
+
+
+            if (IsElementPresent(Folow.TextBuscar))
+            {
+                Thread.Sleep(5000);
+                Folow.TextBuscar.SendKeys("Cova Lol" + Keys.Enter);
+                Folow.LinkCova.Click();
+                Thread.Sleep(5000);
+                Folow.DaleLike.Click();
+                Thread.Sleep(5000);
+                Folow.SeleccionaCmt.Click();
+                Thread.Sleep(5000);
+
+
+            }
+            else if (IsElementPresent(Folow.TextBuscar2))
+            {
+                Folow.TextBuscar.SendKeys("Cova Lol" + Keys.Enter);
+                Folow.LinkCova.Click();
+                Thread.Sleep(5000);
+                Folow.DaleLike.Click();
+                Thread.Sleep(5000);
+                Folow.SeleccionaCmt.Click();
+                Thread.Sleep(5000);
+            }
+        }
 
     }
 }

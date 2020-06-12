@@ -1,0 +1,21 @@
+*Se cambió manera de buscar locators (de IWebElement a Find By)
+para validaciones de versiones
+
+*En el cambio de login aplicó la validación con un ejemplo, ya que 
+la versión nueva y la vieja tienen el mismo login.
+
+Adrián López- SetUp y login
+-BasePage.cs
+-LoginLocators.cs
+-AddComments (UserLogin,IsElementPresent)
+-LoginTest.cs
+
+Miguel Aguilar - buscar página cova lol, like y comentario
+-FollowLocator.cs
+-AddComments
+-CommentsTest(Buscar Cova)
+
+Alberto Gutiérrez -buscar chat, y mandar mensaje hola
+-HomeLocators.cs
+-AddComments (mandar mensaje)
+-TestCase(ChatTest)
