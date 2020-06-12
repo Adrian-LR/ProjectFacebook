@@ -19,9 +19,15 @@ namespace ProjectFacebook.Locators
             driver = Driver;
             wait = Wait;
         }
-         public IWebElement TextBuscar => driver.FindElement(By.XPath("//input[contains(@name,'q')]"));
-         public IWebElement LinkCova => driver.FindElement(By.XPath("//a[contains(text(),'Cova LoL')] "));
-         public IWebElement DaleLike => driver.FindElement(By.XPath("//button[contains(text(),'Me gusta')]"));
-         public IWebElement SeleccionaCmt => driver.FindElement(By.XPath("/html[1]/body[1]/div[13]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]"));
+        public By TextBuscar => By.XPath("//input[contains(@name,'q')]");
+        public By LinkCova => By.XPath("//a[contains(text(),'Cova LoL')]");
+        public By DaleLike => By.XPath("//button[contains(text(),'Me gusta')]");
+        public By SeleccionaCmt => By.XPath("/html[1]/body[1]/div[13]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");
+
+        public By TextBuscar2 => By.XPath("//input[contains(@name,'q')]");
+        public By LinkCova2 => By.XPath("//a[contains(text(),'Cova LoL')]");
+        public By DaleLike2 => By.XPath("//button[contains(text(),'Me gusta')]");
+        public By SeleccionaCmt2 => By.XPath("/html[1]/body[1]/div[13]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");
+
     }
 }
