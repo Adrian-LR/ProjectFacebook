@@ -67,20 +67,68 @@ namespace ProjectFacebook.Automation
         {           
             try
             {
-                homeLoc = new HomeLocators(driver, wait);
-                Thread.Sleep(5000);
-                homeLoc.btnbuscarChat.Click();
-                Thread.Sleep(5000);
-                homeLoc.txtBuscarChat.Click();
-                Thread.Sleep(2000);
-                homeLoc.txtBuscarChat.SendKeys("Oscar Cova");
-                Thread.Sleep(5000);
-                homeLoc.seleccionaCova.Click();
-                Thread.Sleep(2000);
-                homeLoc.txtMensajeCova.SendKeys("Hola");
-                Thread.Sleep(2000);
-                homeLoc.btnEnviarACova.Click();               
-                
+                homeLoc = new HomeLocators(driver, wait);                
+                Thread.Sleep(7000);
+                if (IsElementPresent(homeLoc.btnbuscarChat))
+                {
+                    driver.FindElement(homeLoc.btnbuscarChat).Click();
+                    Thread.Sleep(5000);
+                }
+                else if (IsElementPresent(homeLoc.btnbuscarChat1))
+                {
+                    driver.FindElement(homeLoc.btnbuscarChat1).Click();
+                    Thread.Sleep(5000);
+                }
+                if (IsElementPresent(homeLoc.txtBuscarChat))
+                {
+                    driver.FindElement(homeLoc.txtBuscarChat).Click();
+                    Thread.Sleep(2000);
+
+                }
+                else if (IsElementPresent(homeLoc.txtBuscarChat1))
+                {
+                    driver.FindElement(homeLoc.txtBuscarChat1).Click();
+                    Thread.Sleep(2000);
+                }
+                if (IsElementPresent(homeLoc.txtBuscarChat))
+                {
+                    driver.FindElement(homeLoc.txtBuscarChat).SendKeys("Oscar Cova");
+                    Thread.Sleep(5000);
+                }
+                else if (IsElementPresent(homeLoc.txtBuscarChat1))
+                {
+                    driver.FindElement(homeLoc.txtBuscarChat1).SendKeys("Oscar Cova");
+                    Thread.Sleep(5000);
+                }
+                if (IsElementPresent(homeLoc.seleccionaCova))
+                {
+                    driver.FindElement(homeLoc.seleccionaCova).Click();
+                    Thread.Sleep(2000);
+
+                }
+                else if (IsElementPresent(homeLoc.seleccionaCova1))
+                {
+                    driver.FindElement(homeLoc.seleccionaCova1).Click();
+                    Thread.Sleep(2000);
+                }
+                if (IsElementPresent(homeLoc.txtMensajeCova))
+                {
+                    driver.FindElement(homeLoc.txtMensajeCova).SendKeys("Hola");
+                    Thread.Sleep(2000);
+                }
+                else if (IsElementPresent(homeLoc.txtMensajeCova1))
+                {
+                    driver.FindElement(homeLoc.txtMensajeCova1).SendKeys("Hola");
+                    Thread.Sleep(2000);
+                }
+                 if (IsElementPresent(homeLoc.btnEnviarACova)) {
+                     driver.FindElement(homeLoc.btnEnviarACova).Click();                     
+
+                 } else if (IsElementPresent(homeLoc.btnEnviarACova)) {
+                     driver.FindElement(homeLoc.btnEnviarACova1).Click();                    
+                 }
+
+
             }
             catch (Exception e)
             {                
