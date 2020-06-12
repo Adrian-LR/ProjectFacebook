@@ -19,7 +19,7 @@ namespace ProjectFacebook.TestCases
                 var driver = SetUp();
                 var like = new AddComment(driver, new WebDriverWait(driver, TimeSpan.FromSeconds(20)));
                 like.UserLogin(driver);
-                like.Darlike(driver);
+                like.BuscaCova(driver);
                 driver.Quit();
             }
             catch (Exception e)
