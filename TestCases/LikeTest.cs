@@ -9,7 +9,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace ProjectFacebook.TestCases
 {
-    class ChatTest : Base.BasePage
+    class LikeTest : Base.BasePage
     {
         [Test]
         public virtual void LikeFacebook()
